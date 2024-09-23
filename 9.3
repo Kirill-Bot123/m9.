@@ -1,0 +1,9 @@
+first = ['Strings', 'Student', 'Computers']
+second = ['Строка', 'Урбан', 'Компьютер']
+
+# Генераторная сборка для разницы длин строк
+first_result = (len(x) - len(y) for x, y in zip(first, second))
+second_result = (len(first[x]) == len(second[x]) for x in range(len(first)))
+# Преобразуем генератор в список и выводим результаты
+print(list(first_result))
+print(list(second_result))
