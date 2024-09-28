@@ -1,0 +1,10 @@
+def all_variants(text): # создаем функцию для вызова генератора
+    for i in range(len(text)):
+        for j in range(i+1, len(text) + 1):
+            yield text[i: j]
+
+
+
+a = all_variants("abc") # задаем элемент текста >text<
+for i in a: # вызываем наш генератор
+    print(i) # выводим элементы один за другим
